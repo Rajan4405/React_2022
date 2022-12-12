@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import './ExpenseForm.css'
+import './ExpenseForm.css';
+
+
 const ExpenseForm = () => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
@@ -54,7 +56,7 @@ const ExpenseForm = () => {
     <div className='new-expense__controls'>
       <div className='new-expense__control'>
         <label>Title</label>
-        <input type="text" onChange={titleChangeHandler} />
+        <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
       </div>
       <div className='new-expense__control'>
         <label>Amount</label>
